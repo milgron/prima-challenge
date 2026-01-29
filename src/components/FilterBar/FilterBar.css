@@ -1,0 +1,113 @@
+.filter-bar {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  flex-wrap: wrap;
+}
+
+.filter-bar__label {
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+  text-transform: uppercase;
+  color: var(--color-text-secondary);
+  letter-spacing: 0.5px;
+}
+
+.filter-bar__buttons {
+  display: flex;
+  gap: var(--spacing-sm);
+  flex-wrap: wrap;
+}
+
+.filter-bar__button {
+  font-family: var(--font-family);
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+  text-transform: uppercase;
+  padding: 8px 16px;
+  border-radius: var(--radius-md);
+  border: none;
+  cursor: pointer;
+  transition:
+    opacity 0.2s ease,
+    transform 0.1s ease;
+  color: white;
+}
+
+.filter-bar__button:not(.filter-bar__button--active) {
+  opacity: 0.6;
+}
+
+.filter-bar__button:hover {
+  opacity: 1;
+}
+
+.filter-bar__button:active {
+  transform: scale(0.95);
+}
+
+/* Role colors */
+.filter-bar__button--admin {
+  background-color: var(--color-badge-admin);
+}
+
+.filter-bar__button--editor {
+  background-color: var(--color-badge-editor);
+}
+
+.filter-bar__button--viewer {
+  background-color: var(--color-badge-viewer);
+}
+
+.filter-bar__button--guest {
+  background-color: var(--color-badge-guest);
+}
+
+.filter-bar__button--owner {
+  background-color: var(--color-badge-owner);
+  color: var(--color-badge-inactive-text);
+}
+
+.filter-bar__button--inactive {
+  background-color: var(--color-badge-inactive);
+  color: var(--color-badge-inactive-text);
+}
+
+/* Active state indicator */
+.filter-bar__button--active {
+}
+
+/* Clear/remove filters ghost button */
+.filter-bar__clear {
+  font-family: var(--font-family);
+  font-size: var(--font-size-sm);
+  font-weight: 400;
+  color: var(--color-text-secondary);
+  text-decoration: underline;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  margin-left: auto;
+}
+
+.filter-bar__clear:hover {
+  color: var(--color-text-primary);
+}
+
+/* Mobile responsive */
+@media (max-width: 480px) {
+  .filter-bar {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .filter-bar__buttons {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .filter-bar__clear {
+    margin-left: 0;
+  }
+}

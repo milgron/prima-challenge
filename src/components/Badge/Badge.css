@@ -1,0 +1,54 @@
+.badge {
+  font-family: var(--font-family);
+  font-weight: 500;
+  text-transform: uppercase;
+  border-radius: var(--radius-md);
+  display: inline-block;
+  white-space: nowrap;
+}
+
+/* Sizes */
+.badge--small {
+  font-size: 10px;
+  padding: 8px 16px;
+  gap: 10px;
+}
+
+.badge--medium {
+  font-size: var(--font-size-sm);
+  padding: 8px 16px;
+  gap: 10px;
+}
+
+/* Role colors */
+.badge--admin {
+  background-color: var(--color-badge-admin);
+  color: white;
+}
+
+.badge--editor {
+  background-color: var(--color-badge-editor);
+  color: white;
+}
+
+.badge--viewer {
+  background-color: var(--color-badge-viewer);
+  color: white;
+}
+
+.badge--guest {
+  background-color: var(--color-badge-guest);
+  color: white;
+}
+
+.badge--owner {
+  background-color: var(--color-badge-owner);
+  color: var(--color-badge-inactive-text);
+  border: 1px solid var(--color-border);
+}
+
+.badge--inactive {
+  background-color: var(--color-badge-inactive);
+  color: var(--color-badge-inactive-text);
+  border: 1px solid var(--color-border);
+}

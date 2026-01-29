@@ -1,0 +1,108 @@
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.app__header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-lg);
+  padding: 30vh var(--spacing-xl);
+  transition: padding 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.app--searched .app__header {
+  padding: 32px var(--spacing-xl) var(--spacing-lg);
+}
+
+.app__title {
+  font-size: 60px;
+  font-weight: var(--font-weight-title);
+  line-height: var(--line-height-title);
+  margin: 0;
+  text-align: center;
+}
+
+.app__title-highlight {
+  background: linear-gradient(to right, #FF784E, #FB347C);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.app__main {
+  flex: 1;
+  padding: 0 var(--spacing-xl) var(--spacing-xl);
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  opacity: 0;
+  overflow: hidden;
+  transform: translateY(20px);
+  pointer-events: none;
+  transition: opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1),
+              transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.app--searched .app__main {
+  opacity: 1;
+  overflow: visible;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.app__controls {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+  margin-bottom: var(--spacing-xl);
+  padding-bottom: var(--spacing-lg);
+  border-bottom: 1px solid #63666A;
+}
+
+.app__results {
+  margin-top: var(--spacing-lg);
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+  .app__header {
+    padding: 25vh var(--spacing-md);
+  }
+
+  .app--searched .app__header {
+    padding: var(--spacing-md);
+  }
+
+  .app__main {
+    padding: 0 var(--spacing-md) var(--spacing-md);
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .app__header {
+    padding: 20vh var(--spacing-md);
+  }
+
+  .app--searched .app__header {
+    padding: var(--spacing-sm) var(--spacing-md);
+  }
+
+  .app__main {
+    padding: 0 var(--spacing-sm) var(--spacing-sm);
+  }
+
+  .app__title {
+    font-size: 32px;
+  }
+
+  .app__controls {
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-md);
+    padding-bottom: var(--spacing-md);
+  }
+}
