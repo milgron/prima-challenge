@@ -1,0 +1,56 @@
+.user-card {
+  background-color: #FFFFFF;
+  border-radius: 20px;
+  padding: 16px;
+  border: 1px solid #D3D3DC;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--spacing-sm);
+}
+
+.user-card__name {
+  font-size: var(--font-size-title);
+  font-weight: var(--font-weight-title);
+  margin: var(--spacing-sm) 0 0 0;
+  color: var(--color-text-primary);
+}
+
+.user-card__job-title {
+  font-size: var(--font-size-md);
+  color: var(--color-text-secondary);
+  margin: 0;
+}
+
+.user-card__info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.user-card__label {
+  font-size: var(--font-size-sm);
+  font-weight: 300;
+  color: var(--color-text-muted);
+}
+
+.user-card__value {
+  font-size: var(--font-size-md);
+  color: var(--color-text-primary);
+}
+
+.user-card__email {
+  font-size: var(--font-size-md);
+  color: var(--color-primary);
+  text-decoration: none;
+  word-break: break-word;
+}
+
+.user-card__email:hover {
+  text-decoration: underline;
+}
+
+.user-card .button {
+  margin-top: auto;
+  align-self: stretch;
+}
